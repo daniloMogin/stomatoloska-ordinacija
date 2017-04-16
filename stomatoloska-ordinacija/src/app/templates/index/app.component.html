@@ -1,3 +1,7 @@
+<div class="jumbotron">
+    <h1 class="display-3">stomatološka ordinacija "DR BRANKO MILANOVIĆ" Novi Sad</h1>
+    <p class="lead">Stomatološka ordinacija Novi Sad / Dentist Novi Sad</p>
+</div>
 <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,25 +11,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Treatments</a>
+                <a class="nav-link" routerLink="/treatments" routerLinkActive="active">Treatments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Dental Implants</a>
+                <a class="nav-link" routerLink="/dental-implant" routerLinkActive="active">Dental Implants</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Dental Tourisim</a>
+                <a class="nav-link" routerLink="/dental-tourism" routerLinkActive="active">Dental Tourisim</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
+                <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
         </ul>
     </div>
 </nav>
-
-<h1>{{title}}</h1>
+<router-outlet></router-outlet>
