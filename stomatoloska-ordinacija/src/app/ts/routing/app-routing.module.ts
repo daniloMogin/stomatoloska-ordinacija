@@ -11,23 +11,13 @@ const appRoutes: Routes = [
     data: { preload: true }
   },
   {
-    path: 'treatments',
-    loadChildren: 'app/ts/treatments/treatments.module#TreatmentsModule',
+    path: 'main-page',
+    loadChildren: 'app/ts/main-page/main-page.module#MainPageModule',
     data: { preload: true }
   },
   {
-    path: 'dental-implant',
-    loadChildren: 'app/ts/dental-implant/dental-implant.module#DentalImplantModule',
-    data: { preload: true }
-  },
-  {
-    path: 'dental-tourism',
-    loadChildren: 'app/ts/dental-tourism/dental-tourism.module#DentalTourismModule',
-    data: { preload: true }
-  },
-  {
-    path: 'gallery',
-    loadChildren: 'app/ts/gallery/gallery.module#GalleryModule',
+    path: 'services',
+    loadChildren: 'app/ts/services/services.module#ServicesModule',
     data: { preload: true }
   },
   {

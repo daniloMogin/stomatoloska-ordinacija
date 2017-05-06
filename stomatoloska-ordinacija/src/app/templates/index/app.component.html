@@ -1,34 +1,69 @@
-<div class="jumbotron">
-    <h1 class="display-3">stomatološka ordinacija "DR BRANKO MILANOVIĆ" Novi Sad</h1>
-    <p class="lead">Stomatološka ordinacija Novi Sad / Dentist Novi Sad</p>
-</div>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+<header class="header">
+    <nav class="navbar main-grid">
+        <div class="col-4 text-left">
+            <a class="" href="#"><img src="./../../../assets/images/logo/logo-big-sa.png" alt="logo big"></a>
+        </div>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" routerLink="/about-us" routerLinkActive="active">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/treatments" routerLinkActive="active">Treatments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/dental-implant" routerLinkActive="active">Dental Implants</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/dental-tourism" routerLinkActive="active">Dental Tourisim</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+        <div class="col-8">
+            <ul class="">
+                <li class="">
+                    <a class="" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
+                </li>
+                <li class="">
+                    <a class="" routerLink="/services" routerLinkActive="active">Usluge</a>
+                </li>
+                <li class=" active">
+                    <a class="" routerLink="/about-us" routerLinkActive="active">O nama</a>
+                </li>
+                <li class="">
+                    <a class="" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
 <router-outlet></router-outlet>
+
+<footer class="footer">
+    <div class="main-grid">
+        <div class="top">
+            <div class="col-4 text-left">
+                <a href="javascript:;">
+                    <img src="./../../../assets/images/logo/logo-sa.png" alt="logo small">
+                </a>
+            </div>
+            <div class="col-8">
+                <ul class="">
+                    <li class="">
+                        <a class="" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
+                    </li>
+                    <li class="">
+                        <a class="" routerLink="/services" routerLinkActive="active">Usluge</a>
+                    </li>
+                    <li class=" active">
+                        <a class="" routerLink="/about-us" routerLinkActive="active">O nama</a>
+                    </li>
+                    <li class="">
+                        <a class="" routerLink="/contact" routerLinkActive="active">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="mid text-left">
+            <i><img src="./../../../assets/images/ico/facebook.png" alt="facebook"></i>
+            <i><img src="./../../../assets/images/ico/twitter.png" alt="twitter"></i>
+            <i><img src="./../../../assets/images/ico/instagram.png" alt="instagram"></i>
+        </div>
+    </div>
+    <div class="bot">
+        <div class="main-grid">
+            <div class="col-8 text-left">
+                <a href="javascript:;">srp</a>
+                <a href="javascript:;">eng</a>
+            </div>
+            <div class="col-4">asd</div>
+        </div>
+    </div>
+</footer>

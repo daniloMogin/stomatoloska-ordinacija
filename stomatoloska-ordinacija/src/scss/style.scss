@@ -1,0 +1,112 @@
+/*----------  config
+------------------------------------------------------------------------------*/
+
+@import "config/reset";
+@import "config/variables";
+@import "config/typography";
+
+/*----------  helpers
+------------------------------------------------------------------------------*/
+
+@import "helpers/mixins";
+
+/*----------  layout
+------------------------------------------------------------------------------*/
+
+@import "layout/layout";
+@import "layout/icons";
+@import "layout/buttons";
+
+/*----------  libs
+------------------------------------------------------------------------------*/
+
+
+/*----------  partials
+------------------------------------------------------------------------------*/
+
+@import "partials/header";
+@import "partials/footer";
+
+/*----------  slider
+------------------------------------------------------------------------------*/
+
+.main-page {
+    // background: url(./../../assets/images/content/about-us/hero.jpg) no-repeat;
+    // background-size: cover;
+    // transform: translateY(-104px);
+    background: $gray;
+    width: 100%;
+    h1 {
+        padding: 150px 0;
+    }
+    .carousel-indicators {
+        bottom: 43px;
+        li {
+            max-width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+    }
+}
+
+.who-we-are {
+    background: $white;
+    position: relative;
+    .about-us {
+        position: absolute;
+        width: 34%;
+        text-align: right;
+        top: 20%;
+        left: 69px;
+        .au-top {
+            background: transparent;
+            h3 {
+                color: $blue-light;
+                font-size: 22px;
+                padding: 0;
+                line-height: 15px;
+                text-transform: none;
+            }
+            h2 {
+                color: $black;
+                font-size: 30px;
+                padding: 10px 0 21px 0;
+                line-height: 15px;
+                font-weight: 500;
+                text-transform: none;
+            }
+        }
+        .au-bot {
+            background: $white;
+            overflow: hidden;
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                text-align: justify;
+                padding: 16px 14px 68px 11px;
+            }
+            .au-btn-wrap {
+                padding: 20px;
+                a {
+                    background: $black;
+                    color: $white;
+                    padding: 2px 16px 7px 16px;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+    .about-us-img {
+        width: 66.7%;
+        margin: 95px 0;
+        float: right;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.service {
+    background: $blue-light;
+}

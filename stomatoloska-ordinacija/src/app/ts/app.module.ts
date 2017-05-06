@@ -8,12 +8,10 @@ import { AppComponent } from './index/app.component';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { PageNotFoundComponent } from './not-found.component';
 
-import { TreatmentsModule } from './treatments/treatments.module';
+import { MainPageModule } from './main-page/main-page.module';
 import { AboutUsModule } from './about-us/about-us.module';
 import { ContactModule } from './contact/contact.module';
-import { DentalImplantModule } from './dental-implant/dental-implant.module';
-import { DentalTourismModule } from './dental-tourism/dental-tourism.module';
-import { GalleryModule } from './gallery/gallery.module';
+import { ServicesModule } from './services/services.module';
 
 @NgModule({
   declarations: [
@@ -25,10 +23,8 @@ import { GalleryModule } from './gallery/gallery.module';
     FormsModule,
     HttpModule,
     AboutUsModule,
-    TreatmentsModule,
-    DentalImplantModule,
-    DentalTourismModule,
-    GalleryModule,
+    MainPageModule,
+    ServicesModule,
     ContactModule,
     AppRoutingModule
   ],

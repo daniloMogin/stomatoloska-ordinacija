@@ -1,0 +1,48 @@
+.header {
+    // background: $gray;
+    background: transparent;
+    overflow: hidden;
+    text-align: right;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    .col-4 {
+        a {
+            img {
+                width: 174px;
+                padding: 27px 0 0 0;
+                margin-left: 26px;
+            }
+        }
+    }
+    .col-8 {
+        ul {
+            padding-top: 18px;
+            li {
+                display: inline-block;
+                padding-right: 32px;
+                font-size: 21px;
+                &:last-of-type {
+                    padding-right: 13px;
+                }
+                a {
+                    color: $white;
+                    @include transition($slowDuration);
+                    &:hover {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+    // .col-8 {
+    //     width: 60%;
+    //     float: left;
+    // }
+    // .col-4 {
+    //     width: 39%;
+    //     float: left;
+    // }
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {}
+}

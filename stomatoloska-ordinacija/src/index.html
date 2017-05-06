@@ -2,20 +2,85 @@
 <html>
 
 <head>
+    <base href="./">
     <meta charset="utf-8">
     <title>StomatoloskaOrdinacija</title>
-    <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 
 <body>
     <app-root>Loading...</app-root>
+
+
+    <script>
+        function initMap() {
+            console.log(`init map`)
+            var novi_sad = {
+                lat: 45.256131,
+                lng: 19.854324
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: novi_sad
+            });
+            var marker = new google.maps.Marker({
+                position: novi_sad,
+                map: map
+            });
+        }
+
+        function initMap() {
+            var novi_sad = {
+                lat: 45.256162,
+                lng: 19.854597
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17,
+                center: novi_sad,
+                scrollwheel: false
+            });
+
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h6 id="firstHeading" class="firstHeading">Stomatološka ordinacija "dr Branko Milanović"</h6>' +
+                '<div id="bodyContent">' +
+                '<p>Dunavska 34</p>' +
+                '<p>Novi Sad, 21000</p>' +
+                '<p>Serbia</p>' +
+                '</div>' +
+                '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: novi_sad,
+                map: map,
+                title: 'Novi Sad'
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbyfrff5uwtzZ52ue6gygkIeS6ULWMm_w&callback=initMap">
+    </script>
 </body>
 
 </html>

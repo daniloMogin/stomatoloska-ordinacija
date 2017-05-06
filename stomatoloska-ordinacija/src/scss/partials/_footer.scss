@@ -1,0 +1,61 @@
+.footer {
+    clear: both;
+    background: $gray;
+    text-align: right;
+    .top {
+        overflow: hidden;
+        .col-4 {
+            a {
+                img {
+                    width: 115px;
+                    padding: 34px 0 0 0;
+                }
+            }
+        }
+        .col-8 {
+            ul {
+                padding-top: 30px;
+                li {
+                    display: inline-block;
+                    padding-right: 8px;
+                    font-size: 22px;
+                    a {
+                        color: $white;
+                        font-size: 15.75px;
+                        &:hover {
+                            color: $blue-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mid {
+        padding: 15px 0 15px 0;
+        i {
+            img {
+                width: 10px;
+            }
+        }
+    }
+    .bot {
+        border-top: 1px solid $white;
+        .col-4,
+        .col-8 {
+            padding: 5px 0px 10px 0;
+        }
+        .col-4 {
+            border-left: 1px solid $white;
+        }
+        .col-8 {
+            a {
+                color: $white;
+                &:hover {
+                    color: $blue-light;
+                }
+            }
+        }
+    }
+    @include breakpoint(tablet) {}
+    @include breakpoint(phone) {}
+}
