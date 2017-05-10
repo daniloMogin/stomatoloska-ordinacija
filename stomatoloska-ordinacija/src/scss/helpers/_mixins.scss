@@ -11,13 +11,28 @@
 ------------------------------------------------------------------------------*/
 
 @mixin breakpoint($breakpoint) {
+    @if $breakpoint=="phone-small" {
+        @media only screen and (min-width: 320px) and (max-width: 443px) {
+            @content;
+        }
+    }
     @if $breakpoint=="phone" {
-        @media only screen and (min-width: 50px) and (max-width: 630px) {
+        @media only screen and (min-width: 444px) and (max-width: 603px) {
+            @content;
+        }
+    }
+    @if $breakpoint=="phone-mid" {
+        @media only screen and (min-width: 604px) and (max-width: 630px) {
             @content;
         }
     }
     @else if $breakpoint=="tablet" {
         @media only screen and (min-width: 631px) and (max-width: 896px) {
+            @content;
+        }
+    }
+    @else if $breakpoint=="footer" {
+        @media only screen and (min-width: 897px) and (max-width: 1134px) {
             @content;
         }
     }

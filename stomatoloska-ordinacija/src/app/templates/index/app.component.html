@@ -1,13 +1,14 @@
 <header class="header">
     <nav class="navbar main-grid">
         <div class="col-4 text-left">
-            <a class="" href="#"><img src="./../../../assets/images/logo/logo-big-sa.png" alt="logo big"></a>
+            <a class="show" href="javascript:;"><img src="./../../../assets/images/logo/logo-big-sa.png" alt="logo big"></a>
+            <a class="none" href="javascript:;"><img src="./../../../assets/images/logo/logo_black.png" alt="logo black"></a>
         </div>
 
         <div class="col-8">
             <ul class="">
                 <li class="">
-                    <a class="" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
+                    <a class="active" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
                 </li>
                 <li class="">
                     <a class="" routerLink="/services" routerLinkActive="active">Usluge</a>
@@ -29,12 +30,12 @@
 <footer class="footer">
     <div class="main-grid">
         <div class="top">
-            <div class="col-4 text-left">
+            <div class="col-4 text-left none">
                 <a href="javascript:;">
                     <img src="./../../../assets/images/logo/logo-sa.png" alt="logo small">
                 </a>
             </div>
-            <div class="col-8">
+            <div class="col-8 none">
                 <ul class="">
                     <li class="">
                         <a class="" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
@@ -51,19 +52,20 @@
                 </ul>
             </div>
         </div>
-        <div class="mid text-left">
-            <i><img src="./../../../assets/images/ico/facebook.png" alt="facebook"></i>
-            <i><img src="./../../../assets/images/ico/twitter.png" alt="twitter"></i>
-            <i><img src="./../../../assets/images/ico/instagram.png" alt="instagram"></i>
+        <div class="mid text-left ">
+            <i class="ico-face"><img src="./../../../assets/images/ico/facebook.png" alt="facebook"></i>
+            <i class="ico-twit"><img src="./../../../assets/images/ico/twitter.png" alt="twitter"></i>
+            <i class="ico-insta"><img src="./../../../assets/images/ico/instagram.png" alt="instagram"></i>
         </div>
     </div>
     <div class="bot">
         <div class="main-grid">
-            <div class="col-8 text-left">
+            <div class="col-8">
                 <a href="javascript:;">srp</a>
+                <a>/</a>
                 <a href="javascript:;">eng</a>
             </div>
-            <div class="col-4">asd</div>
+            <div class="col-4"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
         </div>
     </div>
 </footer>

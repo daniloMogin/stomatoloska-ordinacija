@@ -6,4 +6,19 @@ import { Component } from '@angular/core';
 })
 export class MainPageComponent {
   title = 'MainPage Component';
+
+  personObj = [];
+    result = null;
+    submitted = false;
+
+    person = {
+        name: '',
+        email: '',
+    };
+
+    onSubmit() {
+      console.log(`onSubmit...`);
+      
+    };
+    active = true;
 }

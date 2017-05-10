@@ -6,21 +6,27 @@
     z-index: 999;
     position: absolute;
     width: 100%;
+    .none {
+        display: none;
+    }
+    .active {
+        color: $blue-light !important;
+    }
     .col-4 {
         a {
             img {
                 width: 174px;
-                padding: 27px 0 0 0;
+                padding: 25px 0 0 0;
                 margin-left: 26px;
             }
         }
     }
     .col-8 {
         ul {
-            padding-top: 18px;
+            padding-top: 15px;
             li {
                 display: inline-block;
-                padding-right: 32px;
+                padding-right: 31px;
                 font-size: 21px;
                 &:last-of-type {
                     padding-right: 13px;
@@ -29,20 +35,160 @@
                     color: $white;
                     @include transition($slowDuration);
                     &:hover {
-                        color: $gray;
+                        color: $blue-light;
                     }
                 }
             }
         }
     }
-    // .col-8 {
-    //     width: 60%;
-    //     float: left;
-    // }
-    // .col-4 {
-    //     width: 39%;
-    //     float: left;
-    // }
-    @include breakpoint(tablet) {}
-    @include breakpoint(phone) {}
+    @include breakpoint(tablet) {
+        .col-8 {
+            ul {
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    @include breakpoint(phone-mid) {
+        background: $blue-light;
+        text-align: left;
+        .show {
+            display: none;
+        }
+        .none {
+            display: block;
+        }
+        .active {
+            color: $white !important;
+        }
+        .col-4 {
+            a {
+                img {
+                    width: 105px;
+                    padding: 20px 0 0 0;
+                    margin-left: 23%;
+                }
+            }
+        }
+        .col-8 {
+            float: left;
+            clear: both;
+            max-width: 100%;
+            width: 100%;
+            padding-left: 25px;
+            ul {
+                li {
+                    font-size: 27px;
+                    letter-spacing: 1px;
+                    padding-right: 7%;
+                    a {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                    &:first-of-type {
+                        padding-left: 17px;
+                    }
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(phone) {
+        background: $blue-light;
+        text-align: left;
+        .show {
+            display: none;
+        }
+        .none {
+            display: block;
+        }
+        .active {
+            color: $white !important;
+        }
+        .col-4 {
+            a {
+                img {
+                    width: 105px;
+                    padding: 20px 0 0 0;
+                    margin-left: 23%;
+                }
+            }
+        }
+        .col-8 {
+            float: left;
+            clear: both;
+            max-width: 100%;
+            width: 100%;
+            padding-left: 3.4%;
+            ul {
+                li {
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                    padding-right: 5%;
+                    a {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                    &:first-of-type {
+                        padding-left: 17px;
+                    }
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    @include breakpoint(phone-small) {
+        background: $blue-light;
+        text-align: left;
+        .show {
+            display: none;
+        }
+        .none {
+            display: block;
+        }
+        .active {
+            color: $white !important;
+        }
+        .col-4 {
+            a {
+                img {
+                    width: 105px;
+                    padding: 17px 0 0 0;
+                    margin-left: 20%;
+                }
+            }
+        }
+        .col-8 {
+            float: left;
+            clear: both;
+            max-width: 100%;
+            width: 100%;
+            padding-left: 0;
+            ul {
+                li {
+                    font-size: 15px;
+                    letter-spacing: 1px;
+                    padding-right: 1%;
+                    a {
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                    &:first-of-type {
+                        padding-left: 17px;
+                    }
+                    &:last-of-type {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
 }
