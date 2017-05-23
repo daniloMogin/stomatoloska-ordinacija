@@ -2,11 +2,11 @@
     float: right;
     padding: 8px 37px;
     border-radius: 0;
-    background: $black;
+    background: $blue-light;
     color: $white;
     letter-spacing: 1px;
     @include transition($slowDuration);
     &:hover {
-        background: $gray;
+        background: $blue;
     }
 }

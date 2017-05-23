@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./../../css/style.css']
 })
 export class AboutUsComponent {
-  title = 'About Us Component';
+  title = 'About Us';
 }

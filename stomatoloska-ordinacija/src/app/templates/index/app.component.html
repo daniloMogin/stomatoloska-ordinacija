@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header color-gray">
     <nav class="navbar main-grid">
         <div class="col-4 text-left">
             <a class="show" href="javascript:;"><img src="./../../../assets/images/logo/logo-big-sa.png" alt="logo big"></a>
@@ -7,18 +7,18 @@
 
         <div class="col-8">
             <ul class="">
-                <li class="">
-                    <a class="active" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
+                <li class="active">
+                    <a class="" routerLink="/main-page" routerLinkActive="active">Pocetna</a>
                 </li>
                 <li class="">
                     <a class="" routerLink="/services" routerLinkActive="active">Usluge</a>
                 </li>
-                <li class=" active">
+                <li class="">
                     <a class="" routerLink="/about-us" routerLinkActive="active">O nama</a>
                 </li>
-                <li class="">
+                <!--<li class="">
                     <a class="" routerLink="/contact" routerLinkActive="active">Kontakt</a>
-                </li>
+                </li>-->
             </ul>
         </div>
 
@@ -46,16 +46,13 @@
                     <li class=" active">
                         <a class="" routerLink="/about-us" routerLinkActive="active">O nama</a>
                     </li>
-                    <li class="">
-                        <a class="" routerLink="/contact" routerLinkActive="active">Kontakt</a>
-                    </li>
                 </ul>
             </div>
         </div>
         <div class="mid text-left ">
-            <i class="ico-face"><img src="./../../../assets/images/ico/facebook.png" alt="facebook"></i>
-            <i class="ico-twit"><img src="./../../../assets/images/ico/twitter.png" alt="twitter"></i>
-            <i class="ico-insta"><img src="./../../../assets/images/ico/instagram.png" alt="instagram"></i>
+            <i class="ico-face"><a href="https://m.facebook.com/milanovicdentist/"><img src="./../../../assets/images/ico/facebook.png" alt="facebook"></a></i>
+            <!--<i class="ico-twit"><img src="./../../../assets/images/ico/twitter.png" alt="twitter"></i>-->
+            <i class="ico-insta"><a href="javascript:;"><img src="./../../../assets/images/ico/instagram.png" alt="instagram"></a></i>
         </div>
     </div>
     <div class="bot">
@@ -65,7 +62,19 @@
                 <a>/</a>
                 <a href="javascript:;">eng</a>
             </div>
-            <div class="col-4"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+            <div class="col-4">
+                <go-top-button [html]="'<i class=\'fa fa-caret-up\'></i>'" [animate]="true" [speed]="50" [acceleration]="2" [scrollDistance]="50" [styles]="{
+                    'position': 'absolute',
+                    'top': '-7px',
+                    'right': '0',
+                    'line-height': '20px',
+                    'color': '#41cbd7',
+                    'background': 'transparent',
+                    'font-size': '36px'
+                 }">
+                </go-top-button>
+            </div>
+            <!--<div class="col-4"><i class="fa fa-caret-up" aria-hidden="true" (click)="toTop()"></i></div>-->
         </div>
     </div>
 </footer>

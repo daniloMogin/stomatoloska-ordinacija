@@ -6,13 +6,13 @@ import { SelectivePreloadingStrategy } from './../selective-preloading-strategy'
 
 const appRoutes: Routes = [
   {
-    path: 'about-us',
-    loadChildren: 'app/ts/about-us/about-us.module#AboutUsModule',
+    path: 'main-page',
+    loadChildren: 'app/ts/main-page/main-page.module#MainPageModule',
     data: { preload: true }
   },
   {
-    path: 'main-page',
-    loadChildren: 'app/ts/main-page/main-page.module#MainPageModule',
+    path: 'about-us',
+    loadChildren: 'app/ts/about-us/about-us.module#AboutUsModule',
     data: { preload: true }
   },
   {
@@ -32,7 +32,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(
-      appRoutes
+      appRoutes, { useHash: true }
     )
   ],
   exports: [

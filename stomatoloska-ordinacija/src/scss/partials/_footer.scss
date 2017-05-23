@@ -50,10 +50,19 @@
         .col-4 {
             width: 32.33%;
             border-left: 1px solid $white;
-            .fa-caret-up {
-                color: $blue-light;
-                font-size: 28px;
-                padding-right: 40px;
+            padding-bottom: 55px;
+            go-top-button {
+                position: relative;
+                bottom: 0;
+                button.go-top-button {
+                    background: red;
+                    .fa-caret-up {
+                        color: $blue-light;
+                        font-size: 28px;
+                        padding-right: 40px;
+                        line-height: 13px;
+                    }
+                }
             }
         }
         .col-8 {
@@ -102,7 +111,7 @@
         .mid {
             padding: 0;
             margin: 89px auto 17px auto;
-            width: 26%;
+            width: 11%;
         }
         .bot {
             border-top: 1px solid $white;
@@ -113,7 +122,7 @@
                 text-transform: uppercase;
             }
             .col-4 {
-                width: 32.33%;
+                width: 37.33%;
                 border: 0;
                 .fa-caret-up {
                     font-size: 37px;
@@ -122,7 +131,7 @@
                 }
             }
             .col-8 {
-                width: 50%;
+                width: 56%;
                 margin-left: 53px;
                 text-align: left;
                 a {
@@ -145,7 +154,7 @@
         .mid {
             padding: 0;
             margin: 89px auto 17px auto;
-            width: 26%;
+            width: 14%;
         }
         .bot {
             border-top: 1px solid $white;
@@ -188,7 +197,7 @@
         .mid {
             padding: 0;
             margin: 89px auto 17px auto;
-            width: 35%;
+            width: 20%;
         }
         .bot {
             border-top: 1px solid $white;
@@ -231,7 +240,7 @@
         .mid {
             padding: 0;
             margin: 89px auto 17px auto;
-            width: 49%;
+            width: 27%;
         }
         .bot {
             border-top: 1px solid $white;

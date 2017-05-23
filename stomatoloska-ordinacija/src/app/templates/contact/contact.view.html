@@ -1,49 +1,101 @@
-<div class="container-fluid">
-    <h1 class="text-center">{{title}}</h1>
-    <div class="row">
-        <div class="col">
-            <h3>Stomatološka ordinacija "dr Branko Milanović"</h3>
-            <p>Dunavska 34, Novi Sad</p>
-            <p>Ordinacija: +381 21 457-592</p>
-            <p>Mobilni: +381 63 519-377</p>
-            <p>Email: dentistmilanovic@yahoo.com</p>
-            <p>Radno vreme:</p>
-            <p>Ponedeljak: 10 - 16h</p>
-            <p>Petak: 10 - 16h</p>
-            <p>Utorak: 15 - 20h</p>
-            <p>Sreda: 15 - 20h</p>
-            <p>Četvrtak: 15 - 20h</p>
-            <p>Subota po dogovoru</p>
-            <p>Nedelja ne radna</p>
+<div class="contact contact-page">
+    <!--<img src="./../../../assets/images/content/slider/transparent-head.png" alt="transparent head">-->
+    <div class="main-grid">
+        <div class="con-title">
+            <div class="con-sqare">
+                <h3><span>Kontakt</span></h3>
+            </div>
         </div>
-        <div id="map" class="col">
+        <div [hidden]="submitted" class="row contact-form">
+            <div class="col">
+                <h3>Online smo za vas:</h3>
+                <div class="con-decor-wrap">
+                    <div class="con-decor">
+                    </div>
+                    <div class="con-decor">
+                    </div>
+                    <div class="con-decor">
+                    </div>
+                    <div class="con-decor">
+                    </div>
+                    <div class="con-decor">
+                    </div>
+                </div>
+                <form #calcForm="ngForm" *ngIf="active" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <!--<label for="name">Ime:</label>-->
+                        <input type="text" id="name" class="form-control" required minlength="4" maxlength="24" name="name" [(ngModel)]="person.name" #name="ngModel" placeholder="Vaše ime i prezime">
+                        <!--<div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+                            <div [hidden]="!name.errors.required">
+                                Name is required
+                            </div>
+                            <div [hidden]="!name.errors.minlength">
+                                Name must be at least 4 characters long.
+                            </div>
+                            <div [hidden]="!name.errors.maxlength">
+                                Name cannot be more than 24 characters long.
+                            </div>
+                        </div>-->
+                    </div>
 
+                    <div class="form-group">
+                        <!--<label for="email">Email:</label>-->
+                        <input type="text" id="email" class="form-control" required minlength="4" maxlength="250" name="email" [(ngModel)]="person.email" #email="ngModel" placeholder="Vaš email">
+                        <!--<div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                            <div [hidden]="!email.errors.required">
+                                Email is required
+                            </div>
+                            <div [hidden]="!email.errors.minlength">
+                                Email must be at least 4 characters long.
+                            </div>
+                            <div [hidden]="!email.errors.maxlength">
+                                Email cannot be more than 250 characters long.
+                            </div>
+                        </div>-->
+                    </div>
+
+                    <div class="form-group">
+                        <!--<label for="email">Email:</label>-->
+                        <textarea id="message" class="form-control" required minlength="4" maxlength="750" name="message" [(ngModel)]="person.message" #message="ngModel" placeholder="Vaša poruka"></textarea>
+                        <!--<div *ngIf="message.errors && (message.dirty || message.touched)" class="alert alert-danger">
+                            <div [hidden]="!message.errors.required">
+                                Message is required
+                            </div>
+                            <div [hidden]="!message.errors.minlength">
+                                Message must be at least 4 characters long.
+                            </div>
+                            <div [hidden]="!message.errors.maxlength">
+                                Message cannot be more than 250 characters long.
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="button-wrap">
+                        <div class="blue-sqare-left"></div>
+                        <button type="submit" class="btn btn-default" [disabled]="!calcForm.form.valid">Pošalji</button>
+
+                        <div class="blue-sqare-right"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <div class="con-detail-wrap">
+                    <h4>telefon</h4>
+                    <p>+381 64/ 111-222</p>
+                    <p class="p-padding">+381 21/ 444-555</p>
+                    <h4>adresa</h4>
+                    <p class="p-padding">Neka adreasa 15/25</p>
+                    <h4>E-mail</h4>
+                    <p class="con-end-padding">test@test.com</p>
+                    <div id="triangle-bottomright-b"></div>
+                    <div id="triangle-bottomright"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleTextarea">Example textarea</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-        <div class="col">
-            Naš tim koordinatora kao i naša stomatološka ordinacija “Dr Branko Milanović” stoji Vam na raspolaganju da odgovori na sva Vaša pitanja i da Vam da sve potrebne informacije u vezi Vašeg lečenja i boravka u Novom Sadu. Možete nas kontaktirati putem telefona,
-            mejla, Skajpa ili Vibera (besplatno). Da biste ostvarili plan terapije i personalizovali predračun besplatno i potpuno neobavezujuće, dovoljno je da nam pošaljete zahtev sa kratkim objašnjenjem zubarskih intervencija koje treba izvršiti. Poželjno
-            je da nam uz zahtev dostavite i ortopan ne stariji od 3 meseca (po mogućstvu u elektronskoj formi) i ako imate predračun koji Vam je već izdao neki zubar iz Srbije ili inostranstva. Na taj način moći ćemo da Vam izdamo precizan predračun i
-            plan terapije, pa možete unapred da planirate svoje vreme i novac.
+        <!--<a href="javascript:;" class="btn btn-default" onclick="myFunction()">map</a>-->
+        <div class="map-wrap">
+            <div id="map-canvas"></div>
         </div>
     </div>
 </div>

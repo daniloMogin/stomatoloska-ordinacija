@@ -8,17 +8,17 @@ export class MainPageComponent {
   title = 'MainPage Component';
 
   personObj = [];
-    result = null;
-    submitted = false;
+  result = null;
+  submitted = false;
 
-    person = {
-        name: '',
-        email: '',
-    };
+  person = {
+    name: '',
+    email: '',
+  };
 
-    onSubmit() {
-      console.log(`onSubmit...`);
-      
-    };
-    active = true;
+  onSubmit() {
+    console.log(`onSubmit...`);
+
+  };
+  active = true;
 }

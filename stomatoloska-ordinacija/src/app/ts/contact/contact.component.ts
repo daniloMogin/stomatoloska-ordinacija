@@ -6,4 +6,19 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   title = 'Kontakt';
+
+  personObj = [];
+  result = null;
+  submitted = false;
+
+  person = {
+    name: '',
+    email: '',
+  };
+
+  onSubmit() {
+    console.log(`onSubmit...`);
+
+  };
+  active = true;
 }
