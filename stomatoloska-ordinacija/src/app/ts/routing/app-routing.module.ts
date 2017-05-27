@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     loadChildren: 'app/ts/contact/contact.module#ContactModule',
     data: { preload: true }
   },
-  { path: '',   redirectTo: '/about-us', pathMatch: 'full' },
+  { path: '',   redirectTo: '/main-page', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

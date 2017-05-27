@@ -164,3 +164,11 @@ body {
     @include breakpoint(tablet) {}
     @include breakpoint(phone) {}
 }
+
+.service-grid {
+    max-width: 1640px;
+    min-width: 260px;
+    margin: 0 auto;
+    // padding: 0 38px;
+    position: relative;
+}
